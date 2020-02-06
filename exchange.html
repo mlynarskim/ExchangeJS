@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exchange</title>
+
+</head>
+
+<body>
+    <div class="input-group">
+        Euro &#8364<input type="number" name="Euro" class="currency" value="" id="currencyEuro" />
+        <input type="button" value="click" OnClick="currencyEuro()" />
+        <br>
+        Dolar &#36;<input type="number" name="Dolar" class="currency" value="" id="currencyDolar" />
+        <input type="button" value="click" OnClick="currencyDolar()" />
+        <br>
+        Pound &#163;<input type="number" name="Pound" class="currency" value="" id="currencyPound" />
+        <input type="button" value="click" OnClick="currencyPound()" />
+        <br>
+    </div>
+
+    <script>
+        function currencyEuro() {
+            let euroInput = document.getElementById("currencyEuro").value;
+            let rates = (4.258);
+            alert(euroInput * rates + "zł");
+        }
+
+        function currencyDolar() {
+            let dolarInput = document.getElementById("currencyDolar").value;
+            let rates = (3.878);
+            alert(dolarInput * rates + "zł");
+        }
+
+        function currencyPound() {
+            let poundInput = document.getElementById("currencyPound").value;
+            let rates = (5.017);
+            alert(poundInput * rates + "zł");
+        }
+    </script>
+
+</body>
+
+</html>
