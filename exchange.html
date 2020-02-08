@@ -5,42 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exchange</title>
+    <title>ExchangeApp</title>
+    <style>
+        body {
+            background-image: url(https://thumbs.dreamstime.com/b/money-dollar-wallpaper-11800609.jpg);
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .input-group {
+            font-size: 34px;
+            color: white;
+            display: block;
+            padding: 30px;
+            margin: 50px;
+            background-color: rgba(61, 61, 61, 0.50);
+            -webkit-box-shadow: 6px -2px 6px 0px rgba(51, 51, 51, 0.49);
+            box-shadow: 6px -2px 6px 0px rgba(51, 51, 51, 0.49);
+        }
+
+        input {
+            margin: 30px;
+            width: 120px;
+            height: 20px;
+            -webkit-box-shadow: 6px -2px 6px 0px rgba(51, 51, 51, 0.49);
+            box-shadow: 6px -2px 6px 0px rgba(51, 51, 51, 0.49);
+        }
+
+        .input-button {
+            font-size: 20px;
+            width: 120px;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="input-group">
-        Euro &#8364<input type="number" name="Euro" class="currency" value="" id="currencyEuro" />
-        <input type="button" value="click" OnClick="currencyEuro()" />
-        <br>
-        Dolar &#36;<input type="number" name="Dolar" class="currency" value="" id="currencyDolar" />
-        <input type="button" value="click" OnClick="currencyDolar()" />
-        <br>
-        Pound &#163;<input type="number" name="Pound" class="currency" value="" id="currencyPound" />
-        <input type="button" value="click" OnClick="currencyPound()" />
-        <br>
+    <div class="container">
+        <div class="input-group">
+            Euro &#8364<input type="number" name="Euro" class="currency" value="" id="currencyEuro" />
+            <input type="button" value="click" OnClick="currencyEuro()" class="input-button" />
+            <hr>
+            Dolar &#36;<input type="number" name="Dolar" class="currency" value="" id="currencyDolar" />
+            <input type="button" value="click" OnClick="currencyDolar()" class="input-button" />
+            <hr>
+            Pound &#163;<input type="number" name="Pound" class="currency" value="" id="currencyPound" />
+            <input type="button" value="click" OnClick="currencyPound()" class="input-button" />
+
+        </div>
+
+        <script>
+            function currencyEuro() {
+                let euroInput = document.getElementById("currencyEuro").value;
+                let rates = (4.258);
+                alert(euroInput * rates + "zł");
+            }
+
+            function currencyDolar() {
+                let dolarInput = document.getElementById("currencyDolar").value;
+                let rates = (3.878);
+                alert(dolarInput * rates + "zł");
+            }
+
+            function currencyPound() {
+                let poundInput = document.getElementById("currencyPound").value;
+                let rates = (5.017);
+                alert(poundInput * rates + "zł");
+            }
+        </script>
     </div>
-
-    <script>
-        function currencyEuro() {
-            let euroInput = document.getElementById("currencyEuro").value;
-            let rates = (4.258);
-            alert(euroInput * rates + "zł");
-        }
-
-        function currencyDolar() {
-            let dolarInput = document.getElementById("currencyDolar").value;
-            let rates = (3.878);
-            alert(dolarInput * rates + "zł");
-        }
-
-        function currencyPound() {
-            let poundInput = document.getElementById("currencyPound").value;
-            let rates = (5.017);
-            alert(poundInput * rates + "zł");
-        }
-    </script>
 </body>
 
 </html>
