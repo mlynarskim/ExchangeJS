@@ -7,3 +7,7 @@ Small app for calculate currency of euro, dolar and pound to polish zloty
 
 #Made a function what input three scores at the same time 
 
+
+15.02.2020r
+#optimized code
+
