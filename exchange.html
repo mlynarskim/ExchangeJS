@@ -81,16 +81,14 @@
         <script>
             function ExchangeApp() {
                 const amount = document.getElementById("amount").value;
-                const ratesEuro = 4.25;
-                const ratesDolar = 3.87;
-                const ratesPound = 5.01;
-                const resultEuro = amount * ratesEuro + "zł";
-                const resultDolar = amount * ratesDolar + "zł";
-                const resultPound = amount * ratesPound + "zł";
-                document.getElementById("currencyEuro").innerHTML = resultEuro;
-                document.getElementById("currencyDolar").innerHTML = resultDolar;
-                document.getElementById("currencyPound").innerHTML = resultPound;
-
+                const rates = {
+                    euro: 4.24,
+                    dolar: 3.90,
+                    pound: 5.09
+                }
+                document.getElementById("currencyEuro").innerHTML = `${amount * rates.euro}zł`;
+                document.getElementById("currencyPound").innerHTML = `${amount * rates.pound}zł`;
+                document.getElementById("currencyDolar").innerHTML = `${amount * rates.dolar}zł`;
             }
         </script>
     </div>
